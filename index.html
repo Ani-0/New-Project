@@ -1,22 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.CSS">
-</head>
-<body>
-    <input type="radio" id="subscribe" name="payment">
-    <label for="subscribe">Subscribe</label><br>
-    <input type="radio" id="visa" name="payment">
-    <label for="visa">Visa</label><br>
-    <input type="radio" id="Master" name="payment">
-    <label for="Master">MasterCard</label><br>
-    <input type="radio" id="paypal" name="payment">
-    <label for="paypal">PayPal</label><br><br>
-    <button id="mybutton">Submit</button><br>
-    <p id="result"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculater Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      *::-webkit-scrollbar {
+        width: 8px;
+      }
+      *::-webkit-scrollbar-thumb {
+        border-radius: 0.5rem;
+        border: 2px solid white;
+        background: #fffff1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex bg-[#272727] h-[100vh] w-full">
+      <div class="container h-full px-[20%] py-[1rem]">
+        <div
+          class="flex flex-col w-full h-full border-2 border-white rounded-lg"
+        >
+          <div
+            class="flex flex-wrap flex-col h-1/3 border-b-2 border-b-white p-2 overflow-y-scroll"
+          >
+            <p
+              id="canvasText"
+              class="text-3xl break-all text-white w-full h-full"
+            >
+            </p>
+          </div>
+
+          <div class="flex flex-col h-2/3">
+            <div class="flex h-1/4 w-full">
+              <button
+              onclick="buttonPress('seven')"
+                id="seven"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                7
+              </button>
+              <button
+              onclick="buttonPress('eight')"
+                id="eight"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                8
+              </button>
+              <button
+              onclick="buttonPress('nine')"
+                id="nine"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                9
+              </button>
+              <button
+              onclick="buttonPress('minus')"
+                id="minus"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                -
+              </button>
+            </div>
+            <div class="flex h-1/4 w-full">
+              <button
+              onclick="buttonPress('four')"
+                id="four"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                4
+              </button>
+              <button
+              onclick="buttonPress('five')"
+                id="five"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                5
+              </button>
+              <button
+              onclick="buttonPress('six')"
+                id="six"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                6
+              </button>
+              <button
+              onclick="buttonPress('divide')"
+                id="divide"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                /
+              </button>
+            </div>
+            <div class="flex h-1/4 w-full">
+              <button
+              onclick="buttonPress('one')"
+                id="one"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                1
+              </button>
+              <button
+              onclick="buttonPress('two')"
+                id="two"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                2
+              </button>
+              <button
+              onclick="buttonPress('three')"
+                id="three"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                3
+              </button>
+              <button
+              onclick="buttonPress('multiply')"
+                id="multiply"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                x
+              </button>
+            </div>
+            <div class="flex h-1/4 w-full">
+              <button
+              onclick="buttonPress('zero')"
+                id="zero"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                0
+              </button>
+              <button
+              onclick="buttonPress('clear')"
+                id="power"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                C
+              </button>
+              <button
+              onclick="buttonPress('equalTo')"
+                id="equalTo"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                =
+              </button>
+              <button
+              onclick="buttonPress('plus')"
+                id="plus"
+                type="button"
+                class="w-full py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-none border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
     <script src="Biggner.js"></script>
-</body>
+  </body>
 </html>
