@@ -1,0 +1,36 @@
+.contener{
+    font-family: sans-serif;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    border: 1.5px solid #1f1e1e;
+    width: 250px;
+    height: 300px;
+    margin-left: 400px;
+    background-color: aliceblue;
+    
+}
+#canvas{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 2rem;
+    width: 200px;
+    height: 25px;
+    
+}
+#fahrenheit{
+    margin-top: 20px;
+    font-size: 1rem;
+}
+#Celsius{
+    margin-top: 10px;
+}
+#submit{
+    font-size: 1rem;
+    margin-top: 10px;
+}
+h1{
+    font-size: 1.5rem;
+}
