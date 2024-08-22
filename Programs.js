@@ -1,7 +1,13 @@
-let number = window.prompt("guess the number");
-number = Number(number);
-if(number == 0 || number <= 10){
-    console.log("Good Work");
-}else{
-    console.log("Not Matched");
+const FirstNumber = document.getElementById("FirstNumber");
+const SecondNumber= document.getElementById("SecondNumber");
+const Multiple = document.getElementById("Multiple");
+const Division = document.getElementById("Division");
+const result = document.getElementById("result");
+
+function buttonPress(s){
+    if(s=="Multiple")
+        {result.innerHTML = FirstNumber.value*SecondNumber.value}
+    if(s=="Division")
+    {result.innerHTML = FirstNumber.value/SecondNumber.value}
 }
+buttonPress(); 
