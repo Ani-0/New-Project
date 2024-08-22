@@ -1,6 +1,5 @@
-const detail = new Date();
-const month = detail.getMonth();
-const day = detail.getDay();
-const year = detail.getFullYear();
-console.log(`${month}, ${day}, ${year}`);
-console.log(`${day}, ${month}, ${year}`);
+const a = 5;
+const b = 6;
+const c = 7;
+const areaofTringel = a + b + c/2;
+console.log(areaofTringel)
