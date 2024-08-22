@@ -1,5 +1,8 @@
-const a = 5;
-const b = 6;
-const c = 7;
-const areaofTringel = a + b + c/2;
-console.log(areaofTringel)
+function leapYear(year){
+    if(year %4 ===0){
+     console.log("leapYear");
+    }else if( year %100 === 0 && year %400 !== 0){
+     console.log("No leapYear");
+    }
+ }
+ leapYear(2000);
