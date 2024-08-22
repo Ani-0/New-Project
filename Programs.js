@@ -1,13 +1,11 @@
-const FirstNumber = document.getElementById("FirstNumber");
-const SecondNumber= document.getElementById("SecondNumber");
-const Multiple = document.getElementById("Multiple");
-const Division = document.getElementById("Division");
-const result = document.getElementById("result");
-
-function buttonPress(s){
-    if(s=="Multiple")
-        {result.innerHTML = FirstNumber.value*SecondNumber.value}
-    if(s=="Division")
-    {result.innerHTML = FirstNumber.value/SecondNumber.value}
+const firstNumber = document.getElementById("firstNumber");
+const SecondNumber = document.getElementById("SecondNumber");
+const addbutton = document.getElementById("addbutton");
+const minus = document.getElementById("minus");
+const results = document.getElementById("results");
+function buttonPress(number){
+      if(number == 'addbutton'){
+        results.innerHTML = Number(firstNumber.value) + Number(SecondNumber.value)
+      }
 }
-buttonPress(); 
+buttonPress();
