@@ -1,7 +1,16 @@
-let day = ["Monday", "Tuesday", "Wednesday", "Thuresday", "Friday", "Suterday", "Sunday"];
-console.log("Today is :", day[4]);
 const today = new Date();
-const time = today.getHours();
-const insecond = today.getMinutes()
-const inMili = today.getMilliseconds();
-console.log(`Current time is : ${time} : ${insecond} : ${inMili}`);
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thuresday",
+  "Friday",
+  "Suterday",
+  "Sunday",
+];
+const Day = today.getDay();
+console.log("Today is", days[Day]);
+const hour = today.getHours();
+const insecond = today.getMinutes();
+const inMili = today.getSeconds();
+console.log(`Current time is : ${hour} : ${insecond} : ${inMili}`);
