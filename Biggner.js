@@ -1,21 +1,19 @@
-const canvas = document.getElementById("canvas");
-const fahrenheit = document.getElementById("fahrenheit");
-const Celsius = document.getElementById("Celsius");
-const result = document.getElementById("result");
-let temp;
-function buttonpress(){
-     if(fahrenheit.checked){
-        temp = Number(canvas.value)
-        temp = (temp - 32) *(9/5);
-        result.innerHTML = temp.toFixed(2) + "°C" 
-    }
-    else if(Celsius.checked){
-        temp = Number (canvas.value);
-        temp = temp * 9 / 5 + 32;
-        result.innerHTML = temp.toFixed(2) + "°F";
-    }
-    else{
-        result.innerHTML = "selecte a unit";
+const mylable = document.getElementById("mylable");
+const incresing =document.getElementById("incresing");
+const reset = document.getElementById("reset");
+const decresing = document.getElementById("decresing");
+let number = 0;
+function buttonPress(action) {
+    if(action === "incresing"){
+        number++;
+        mylable.innerHTML = number;
+    }else if(action === "decresing"){
+        number--;
+        mylable.innerHTML = number;
+    }else if(action === "reset"){
+        number = 0
+        mylable.innerHTML = number;
+    }else{
+        console.error("error");
     }
 }
-

@@ -1,36 +1,35 @@
 .contener{
-    font-family: sans-serif;
-    text-align: center;
     display: block;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    border: 1.5px solid #1f1e1e;
-    width: 250px;
-    height: 300px;
-    margin-left: 400px;
-    background-color: aliceblue;
-    
-}
-#canvas{
-    margin-top: 5px;
     text-align: center;
+    margin-top: 250px;
+    font-family: sans-serif;
     font-size: 2rem;
-    width: 200px;
-    height: 25px;
+}
+#incresing{
+    font-size: 1.5rem;
+    border: 1.5px solid #000;
+    border-radius: 5px;
+}
+#decresing{
+    font-size: 1.5rem;
+    border: 1.5px solid #000;
+    border-radius: 5px;
+}
+#reset{
+    font-size: 1.5rem;
+    border: 1.5px solid #000;
+    border-radius: 5px;
+}
+#mylable{
+    font-size: 5rem;
+}
+#incresing:hover{
+    background-color: lightblue;
     
 }
-#fahrenheit{
-    margin-top: 20px;
-    font-size: 1rem;
+#decresing:hover{
+    background-color: lightblue;
 }
-#Celsius{
-    margin-top: 10px;
-}
-#submit{
-    font-size: 1rem;
-    margin-top: 10px;
-}
-h1{
-    font-size: 1.5rem;
+#reset:hover{
+    background-color: lightblue;
 }
