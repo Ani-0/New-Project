@@ -1,11 +1,13 @@
-const firstNumber = document.getElementById("firstNumber");
-const SecondNumber = document.getElementById("SecondNumber");
-const addbutton = document.getElementById("addbutton");
-const minus = document.getElementById("minus");
-const results = document.getElementById("results");
-function buttonPress(number){
-      if(number == 'addbutton'){
-        results.innerHTML = Number(firstNumber.value) + Number(SecondNumber.value)
-      }
+let number = 25;
+function temperature(Num){
+    return Num = number * 9 / 5 + 32;
 }
-buttonPress();
+const x = temperature();
+console.log(x+"°F");
+
+let number2 = 25;
+function temperature1(Num1){
+    return Num1 = (number2 -32) * (5 / 9);
+}
+const y = temperature1();
+console.log(y+"°C");
