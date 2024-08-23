@@ -1,9 +1,10 @@
-function sumNum(x, y){
-    if(x == y){
-        return 3 * (x + y);
+function spacifyNum(Num){
+    if(Num <= 19){
+    return 19 - Num 
     }else{
-        return(x + y);
+        return (Num - 19)*3
     }
 }
-console.log(sumNum(12,13));
-console.log(sumNum(12,12));
+console.log(spacifyNum(12));
+console.log(spacifyNum(19));
+console.log(spacifyNum(23));
