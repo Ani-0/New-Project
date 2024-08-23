@@ -1,13 +1,9 @@
-let number = 25;
-function temperature(Num){
-    return Num = number * 9 / 5 + 32;
+function sumNum(x, y){
+    if(x == y){
+        return 3 * (x + y);
+    }else{
+        return(x + y);
+    }
 }
-const x = temperature();
-console.log(x+"°F");
-
-let number2 = 25;
-function temperature1(Num1){
-    return Num1 = (number2 -32) * (5 / 9);
-}
-const y = temperature1();
-console.log(y+"°C");
+console.log(sumNum(12,13));
+console.log(sumNum(12,12));
