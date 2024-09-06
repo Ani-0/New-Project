@@ -1,35 +1,41 @@
 .contener{
-    display: block;
+    border: 2px solid #000;
+    width: 200px;
+    height: 200px;
+    text-align:start;
+    padding: 15px;
+}
+#Firstnumber{
+    margin-top: 10px;
+    font-size: 1rem;
+    width: 73px;
+    border: 1.5px solid #000;
     text-align: center;
-    margin-top: 250px;
+    border-radius: 5px;
+}
+#Secondnumber{
+    margin-top: 10px;
+    font-size: 1rem;
+    width: 70px;
+    border: 1.5px solid #000;
+    text-align: center;
+    border-radius: 5px;
+}
+button{
+    margin-top: 15px;
+    border: 1.5px solid #000;
+    border-radius: 5px;
+    font-size: 1rem;
     font-family: sans-serif;
-    font-size: 2rem;
 }
-#incresing{
-    font-size: 1.5rem;
-    border: 1.5px solid #000;
-    border-radius: 5px;
+button:hover{
+    background-color: red;
+    color: white;
 }
-#decresing{
-    font-size: 1.5rem;
-    border: 1.5px solid #000;
-    border-radius: 5px;
+#Result{
+    font-size: 1.2rem;
+    margin-top: 15px;
 }
-#reset{
-    font-size: 1.5rem;
-    border: 1.5px solid #000;
-    border-radius: 5px;
-}
-#mylable{
-    font-size: 5rem;
-}
-#incresing:hover{
-    background-color: lightblue;
-    
-}
-#decresing:hover{
-    background-color: lightblue;
-}
-#reset:hover{
-    background-color: lightblue;
+span{
+    margin-top: 15px;
 }

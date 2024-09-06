@@ -1,96 +1,75 @@
-const People = [
-    {
-        firstName:'John',
-        lastName:'Doe',
-        email:'john@gmail.com',
-        phone:'111-111-1111',
-        age:30,
-    },
-    {
-        firstName:'Jane',
-        lastName:'poe',
-        email:'jane@gmail.com',
-        phone:'222-222-2222',
-        age:25,
-    },
-    {
-        firstName:'Bob',
-        lastName:'Foe',
-        email:'bob@gmail.com',
-        phone:'333-333-3333',
-        age:45,
-    },
-    {
-      firstName:'sara',
-      lastName:'soe',
-      email:'sara@gmail.com',
-      phone:'444-444-4444',
-      aage:19,  
-    },
-    { 
-        firstName:'Jose',
-        lastName:'Koe',
-        email:'jose@gmail.com',
-        phone:'555-555-5555',
-        age:23,
-    },
-];
-const youngPeople = People.map((Person)=>({
-    name:Person.firstName+ ' ' +Person.lastName,
-    email:Person.email,
-}));
-console.log(youngPeople);
+// Question 1.
+// const listofDay = ['Sunday','Monday','Tuesday','wednesday','Thursday','Friday','Suterday']
+// const day = new Date();
+// const Output = day.getDay();
+// console.log('today is: '+listofDay[Output]+'.');
+// const hour = day.getHours();
+// const minutes = day.getMinutes();
+// const second = day.getSeconds();
+// console.log(`${hour}PM:${minutes}:${second}`);
+// //Question 2.  Write a JavaScript program to print the current window contents.  
+// // print (window);
+// //Question 3. Write a JavaScript program to get the current date.
+// const mmddyyyy = `${day.getMonth()+1}-${day.getDate()}-${day.getFullYear()}`;
+// const ddmmyyy = `${day.getMonth()+1}/${day.getDate()}/${day.getFullYear()}`;
+// console.log('mm-dd-yyyy: ',mmddyyyy);
+// console.log('mm/dd/yyyy',ddmmyyy);
+// // Question 4. Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.  
+// let a = 5;
+// let b = 6;
+// let c = 7;
+// console.log(a + b + c);
+// // Question 6.Leap Year Defined 
+// function leapYear(Year){
+//   if(Year % 4 == 0 && Year % 400 == 0){
+//     console.log('Leap Year');
+//   }else if(Year % 100 === 0){
+//     console.log('Not LeapYear')
+//   }else{
+//     console.log('error');
+//   }
+// }
+// leapYear(2000);
+// //Queation 7. Write a JavaScript program to find out if 1st January will be a Sunday between 2014 and 2050.  
+// for(let year = 2014; year <= 2050;year++){
+//   const January1st = new Date(year, 0, 1);
+//   if(January1st.getDay()===0){
+//     console.log(`January 1st,${year} is Sunday`);
+//   }
+// }
+// // Question 8.Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number. The program displays a message "Good Work" if the input matches the guess number otherwise "Not matched".  
+// function getRendom(number){
+//     if(number < 10){
+//        console.log('Good Work')
+//     }else{
+//       console.log('Not Matched');
+//     }
+//   return number;
+// }
+// getRendom(11);
 
-//ForEach Method.
-const social = ['Twitter','Linkdin','Facebook','whatapp','Insagram'];
-// const socialMidia = social.forEach(function(items){
-//     console.log(items);
-// });
-const socialMidia = social.forEach((items)=>console.log(items));
+/*const randomNumber = Math.floor(Math.random() * 10) + 1;
+const userGuess = parseInt(prompt('Enter a number between 1 and 10'));
 
-const number = [2, 3, 4, 5, 6];
+if (userGuess === randomNumber) {
+  console.log('Good Work');
+} else {
+  console.log(`Not matched. The correct answer was ${randomNumber}.`);
+}*/
+// Question 9.Write a JavaScript program to calculate the days left before Christmas. 
+const currentDate = new Date();
+const ChristmasDate = new Date(currentDate.getFullYear(),11,25);
+const differenceInMilliseconds = ChristmasDate.getTime()-currentDate.getTime();
+const daysLeft = Math.floor(differenceInMilliseconds / (1000 * 3600 * 24));
+console.log(`There are ${daysLeft} day left before Christmas`);
 
-function getnumber(Num) {
-  console.log(Num * 2);
+// Question 10.
+const Firstnumber = document.getElementById('Firstnumber');
+const Secondnumber =document.getElementById('Secondnumber');
+const Result = document.getElementById('Result');
+function buttonPress(){
+    Num = Firstnumber.value * Secondnumber.value;
+    Result.innerText = Num;
+    Num = Firstnumber.value / Secondnumber.value;
+    Result.innerHTML = Num;
 }
-
-number.forEach(getnumber);
-
-//map Method.
-const name = ['Jon', 'Starc','Warner','Smith','Dhoni'];
-const getNames = name.map((person)=>{
-    return person;
-});
-console.log(getNames);
-
-const companies = [
-    {Name:'Company One', category:'Retail', start:1978, end:1995},
-    {Name:'Company Two', category:'Finance', start:1959, end:2000},
-    {Name:'Company Three', category:'Pharma', start:1967, end:2005},
-    {Name:'Company four', category:'Retail', start:1947, end:2004},
-    {Name:'Company five', category:'Transport', start:1937, end:1999},
-    {Name:'Company six', category:'Manufacturing', start:1944, end:2001},
-]
-const company = companies.map((item)=>{
-    return {
-        name:item.Name,
-        category:item.category,
-        length:item.end - item.start,
-    }
-});
-console.log(company);
-
-//Chellenge 2.
-const numbers = [2, -30, 50, 20, -12, -9, 7]
-const num = numbers.filter((positive)=> positive > 0)
-.reduce((accumulater, currentvalue)=>{
-    return accumulater + currentvalue;
-})
-console.log(num);
-
-//chelenge 3.
-const words = ['coder', 'programmer','developer'];
-const capitalizedWords = words.map((letter)=>{
-    return letter[0].toUpperCase()+letter.slice(1, letter.length);
-});
-console.log(capitalizedWords);

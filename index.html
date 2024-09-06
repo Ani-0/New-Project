@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.CSS" />
-  </head>
-  <body>
-    <div class="contener">
-      <label for="number" id="mylable">0</label>
-      <div class="button">
-        <button onclick="buttonPress('incresing')" id="incresing">Incresing</button>
-        <button onclick="buttonPress('reset')" id="reset">Reset</button>
-        <button onclick="buttonPress('decresing')" id="decresing">Decresing</button>
-      </div>
-    </div>
-    <script src="Biggner.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.CSS" />
+	</head>
+	<body>
+		<div class="contener">1st number
+			<input type="number" id="Firstnumber" value="0"/><br />2nd number
+			<input type="number" id="Secondnumber" value="0"/><br />
+			<button onclick="buttonPress('multiply')" id="multiply">Multiply</button>
+			<button onclick="buttonPress('divide')" id="divide">Divide</button><br>
+			<span>This is Result:</span><p id="Result"></p>
+		</div>
+		<script src="Programs.js"></script>
+	</body>
 </html>
