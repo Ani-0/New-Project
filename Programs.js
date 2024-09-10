@@ -1,86 +1,73 @@
-// Question 27.
-function checkStr(str){
-  if(str < 4){
+// Question 35.
+const getChar=(string, char)=>{
+  if(string.length < 4){
     return false;
   }
-  let start = str.slice(0, 4);
-  if(start === 'Java'){
-    return 'it dose';
-  }else{
-    return 'it not otherwise';
+  for(let i = 1; i < 4;i++){
+    if(string.charAt(i)==char){
+      return true;
+    }
   }
-};
-console.log(checkStr('JavaAniket'));
-// Question 28.
-function twoInteger(num1, num2){
-  if((num1 >= 50 && num1 <= 90)|| num2 >= 50 && num2 <= 90){
+  return false;
+}
+console.log(getChar('Hello','l'));
+// Question 36.
+const checkPosition=(a, b, c)=>{
+  let lastDigitA = a % 10;
+  let lastDigitB = b % 10;
+  let lastDigitC = c % 10;
+  if(lastDigitA === lastDigitB && lastDigitB === lastDigitC){
     return true;
   }else{
     return false;
   }
-};
-console.log(twoInteger(12,101));
-console.log(twoInteger(52, 80));
-// Question 29.
-function threeNum(a, b, c){
-  if((a >= 50 && a <= 90) || (b >= 50 && b <= 90)|| (c >= 50 && c <= 90)){
-    return true;
-  } else{
-    return false;
-  }
-};
-console.log(threeNum(54, 67, 101));
-// Question 30.
-function checkStr(letter){
-  const target = 'Script';
-  const position = 4;
-  if(letter.slice(position, position + target.length)===target){
-    return letter.slice(0, position) + letter.slice(position + target.length);
-  }
-  return letter;
-};
-console.log(checkStr('JavaScript is fun'));
-// Question 31.
-function largestNum(x, y, z){
-  if(x > y && x > z){
-   console.log(x, 'largest');
-  }else if(y > x && y > z){
-   console.log(y,'largest');
-  }else if(z > x && z > y){
-   console.log(z,'largest');
-  };
 }
-largestNum(45,75,12);
-// Question 32.
-function closestValue(num1, num2){
-  const diff1 = Math.abs(num1 - 100);
-  const diff2 = Math.abs(num2 - 100);
-  if(diff1 < diff2){
-    return num1;
-  }else if(diff2 < diff1){
-    return num2;
-  }else{
-    return num1;
+let a = 123;
+let b = 456;
+let c = 789;
+let result = checkPosition(a, b, c);
+console.log(`The last digit of ${a}, and ${b} and ${c} are same: ${result}`);
+// Question 37.
+const modifyString = (str) => {
+  if (str.length < 3) {
+    return str.toUpperCase();
+  } else {
+    return str.substring(0, 3).toLowerCase() + str.substring(3);
   }
-}
-console.log(closestValue(99, 110));
-// Question 33.
-function getRange(num1, num2){
-  if((num1 >= 40 && num1 <= 60 && num2 >= 40 && num2 <= 60)|| (num2 >= 70 && num2 <= 100 && num1 >= 70 && num1 <= 100)){
+};
+console.log(modifyString('Java')); 
+console.log(modifyString('HelloWorld'));
+// Question 38.
+const getMarks=(FinalExamnumber,totalMark)=>{
+  if(totalMark){
+    return FinalExamnumber >= 90;
+  }
+  if(FinalExamnumber >= 89 && totalMark <= 100){
     return true;
   }else{
     return false;
   };
 }
-console.log(getRange(55, 78));
-// Question 34.
-function getLargest (num1, num2){
-  if(num1 > num2 && num1 >= 40 && num1 <= 60){
-    return num1;
-  }else if(num2 > num1 && num2 >= 40 && num2 <= 60){
-    return num2;
+console.log(getMarks(90,95));
+// Question 39.
+const sumNum = (num1, num2)=>{
+  let sumOf = num1 + num2;
+  if(sumOf >= 50 && sumOf <= 80){
+    return 65;
+  }else{
+    return 80;
+  }
+}
+console.log(sumNum(25, 20));
+// Question 40.
+const diffrenceNum = (num1, num2)=>{
+  if(num1 == 8 || num2 == 8){
+    return true
+  }
+  if(num1 + num2 == 8 || Math.abs(num1 - num2) == 8){
+    return true;
   }else{
     return false;
-  };
-}
-console.log(getLargest(41, 55));
+  }
+} 
+console.log(diffrenceNum(16 , 8));
