@@ -1,73 +1,82 @@
-// Question 35.
-const getChar=(string, char)=>{
-  if(string.length < 4){
-    return false;
-  }
-  for(let i = 1; i < 4;i++){
-    if(string.charAt(i)==char){
-      return true;
-    }
-  }
-  return false;
+// Question 41.
+const checkNum=(num1, num2, num3)=>{
+  if(num1 == num2 && num2 == num3){
+    return 30;
+  }else if(num1 == num2 || num2 == num3 || num3 == num1){
+    return 40;
+  };
+  return 20;
 }
-console.log(getChar('Hello','l'));
-// Question 36.
-const checkPosition=(a, b, c)=>{
-  let lastDigitA = a % 10;
-  let lastDigitB = b % 10;
-  let lastDigitC = c % 10;
-  if(lastDigitA === lastDigitB && lastDigitB === lastDigitC){
+console.log(checkNum(8, 8, 18));
+// Question 42.
+const checkIncreasing =(num1, num2, num3)=>{
+  if(num1 < num2 && num2 < num3){
+    return 'Strict Mode'
+  }else if(num1 >= num2 && num2 < num3){
+    return 'soft Mode'
+  }else{
+    return 'undefined'
+  };
+}
+console.log(checkIncreasing(24, 22, 31));
+// Question 43.
+const threeNumber=(num1, num2, num3)=>{
+  const firstNum = num1 % 10;
+  const secondNum = num2 % 10;
+  const threeNumbers = num3 % 10;
+  if(firstNum === secondNum || secondNum === threeNumbers || threeNumbers === firstNum){
     return true;
   }else{
     return false;
   }
 }
-let a = 123;
-let b = 456;
-let c = 789;
-let result = checkPosition(a, b, c);
-console.log(`The last digit of ${a}, and ${b} and ${c} are same: ${result}`);
-// Question 37.
-const modifyString = (str) => {
-  if (str.length < 3) {
-    return str.toUpperCase();
-  } else {
-    return str.substring(0, 3).toLowerCase() + str.substring(3);
-  }
+console.log(threeNumber(10, 22, 34));
+console.log(threeNumber(23, 33, 43));
+// Question 44.
+const ThreeNum=(num1, num2, num3)=>{
+  return (
+    (num1 >= 20 && (num1 < num2 || num1 < num3))||
+    (num2 >= 20 && (num2 < num1 || num2 < num3))||
+    (num3 >= 20 && (num3 < num1 || num3 < num2))
+  );
+}
+console.log(ThreeNum(23,45,21));
+// Question 45.
+const checkInteger=(num1, num2)=>{
+  return (num1 === 15 || num2 === 15 || num1 + num2 === 15 || Math.abs(num1 - num2)===15);
 };
-console.log(modifyString('Java')); 
-console.log(modifyString('HelloWorld'));
-// Question 38.
-const getMarks=(FinalExamnumber,totalMark)=>{
-  if(totalMark){
-    return FinalExamnumber >= 90;
-  }
-  if(FinalExamnumber >= 89 && totalMark <= 100){
+console.log(checkInteger(15, 30));
+//Question 46.
+const getResult=(num1, num2)=>{
+  const is1NumMultiple = num1 % 7 == 0 || num1 % 11 == 0;
+  const is2NumMultiple = num2 % 7 == 0 || num2 % 11 == 0;
+  return (is1NumMultiple && !is2NumMultiple) || (!is1NumMultiple && is2NumMultiple);
+}
+console.log(getResult(20, 30));
+// Question 47.
+const rangeNUmber =(num1)=>{
+  if(num1 >= 40 && num1 <= 10000){
     return true;
   }else{
     return false;
   };
 }
-console.log(getMarks(90,95));
-// Question 39.
-const sumNum = (num1, num2)=>{
-  let sumOf = num1 + num2;
-  if(sumOf >= 50 && sumOf <= 80){
-    return 65;
-  }else{
-    return 80;
+console.log(rangeNUmber(39));
+// Question 48.
+const reverseString=(str)=>{
+  let reverseStr = '';
+  for(let i = str.length -1; i >= 0;i--){
+    reverseStr += str[i];
   }
+  return reverseStr;
 }
-console.log(sumNum(25, 20));
-// Question 40.
-const diffrenceNum = (num1, num2)=>{
-  if(num1 == 8 || num2 == 8){
-    return true
-  }
-  if(num1 + num2 == 8 || Math.abs(num1 - num2) == 8){
-    return true;
-  }else{
-    return false;
-  }
-} 
-console.log(diffrenceNum(16 , 8));
+let originalString = 'hello';
+let reversedString = reverseString(originalString);
+console.log(`The reverse of '${originalString}' is "${reversedString}"`);
+// Question 50.
+const capitalize=(letter)=>{
+  return letter.split(' ').map(word=>{
+    return word.charAt(0).toUpperCase()+word.slice(1);
+  }).join(' ');
+}
+console.log(capitalize('aniket'));
