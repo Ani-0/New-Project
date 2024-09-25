@@ -1,41 +1,48 @@
-.contener{
-    border: 2px solid #000;
+.from-input{
+    width: 300px;
+    height: 25px;
+}
+.button{
+    margin-top: 15px;
+    background-color: #000;
+    color: #fff;
+}
+.from-input-filter{
+    margin-top: 20px;
+    width: 300px;
+    height: 20px;
+}
+li{
+    display: flex;
+    width: 250px;
+    height: 30px;
+    list-style-type: none;
+    border: 1.5px solid #ccc;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.btn{
+    color: red;
+    border: transparent;
+    font-size: 1rem;
+    background-color: #ffff;
+}
+.clear{
+    display: flex;
+    border: 1.5px solid #ccc;
+    width: 250px;
+    height: 25px;
+    justify-content: center;
+    margin-left: 40px;
+}
+.from-input{
+    margin-top: 20px;
+}
+.filter{
+    border-top-style: none;
+}
+.form-input{
     width: 200px;
-    height: 200px;
-    text-align:start;
-    padding: 15px;
-}
-#Firstnumber{
+    height: 20px;
     margin-top: 10px;
-    font-size: 1rem;
-    width: 73px;
-    border: 1.5px solid #000;
-    text-align: center;
-    border-radius: 5px;
-}
-#Secondnumber{
-    margin-top: 10px;
-    font-size: 1rem;
-    width: 70px;
-    border: 1.5px solid #000;
-    text-align: center;
-    border-radius: 5px;
-}
-button{
-    margin-top: 15px;
-    border: 1.5px solid #000;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: sans-serif;
-}
-button:hover{
-    background-color: red;
-    color: white;
-}
-#Result{
-    font-size: 1.2rem;
-    margin-top: 15px;
-}
-span{
-    margin-top: 15px;
 }
