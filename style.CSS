@@ -1,48 +1,62 @@
-.from-input{
+#item-input{
     width: 300px;
-    height: 25px;
+    height: 30px;
+    border: 1.5px solid #ccc;
+    padding: 2px 0.5rem;
+    font-size: 1rem;
 }
-.button{
-    margin-top: 15px;
-    background-color: #000;
+.item-Add{
+    margin-top: 10px;
+    background-color: #333;
     color: #fff;
+    border: 1px solid #333;
+    border-radius: 2px;
 }
-.from-input-filter{
-    margin-top: 20px;
+#filter{
     width: 300px;
-    height: 20px;
+    height: 30px;
+    border: 1.5px solid #ccc;
+    padding: 2px;
+    font-size: 1rem;
+    margin-top: 15px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
 }
 li{
     display: flex;
     width: 250px;
     height: 30px;
-    list-style-type: none;
     border: 1.5px solid #ccc;
+    list-style-type: none;
+    margin-top: 15px;
     justify-content: space-between;
-    margin-top: 20px;
+    align-items: center;
+    padding: 2px 0.5rem;
 }
 .remove-btn{
     color: red;
+    font-size: 20px;
     border: transparent;
-    font-size: 1rem;
-    background-color: #ffff;
+    background-color: #fff;
 }
-.clear{
+#clear-Item{
     display: flex;
-    border: 1.5px solid #ccc;
     width: 250px;
-    height: 25px;
+    height: 30px;
+    margin-top: 15px;
+    border-color: 1.5px solid #ccc;
     justify-content: center;
+    font-size: 1em;
     margin-left: 40px;
 }
-.from-input{
-    margin-top: 20px;
+.Priority-Input{
+    margin-top: 15px;
+    width: 260px;
+    height: 25px;
+    border-color: 1.5px solid #ccc;
+    font-size: 1rem;
 }
-.filter{
-    border-top-style: none;
-}
-.form-input{
-    width: 200px;
-    height: 20px;
-    margin-top: 10px;
+.checkbox{
+    margin-top: 15px;
 }

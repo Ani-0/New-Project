@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="style.CSS" />
+		<title>Document Shopping List</title>
+		<link rel="stylesheet" href="Style.CSS" />
 		<link
 			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
 			rel="stylesheet"
@@ -13,66 +13,69 @@
 	<body>
 		<div class="contaner">
 			<header>
-				<h1 class="app-element" id="hello">📝 Shopping List</h1>
+				<h1>📝Shopping List</h1>
 			</header>
-			<form id="item-form">
-				<div class="from-control">
+			<form id="form-item">
+				<div class="control-form">
 					<input
 						type="text"
-						class="from-input"
+						class="Intems-Input"
 						id="item-input"
-						name="item"
+						name="items"
+						title="name of Items"
 						placeholder="Enter Item"
 					/>
 				</div>
-				<div class="from-control" id="submit">
-					<button type="submit" class="button" title="plus-add">
-						<i class="bx bx-plus">Add Item</i>
+				<div class="form-control">
+					<button
+						onclick="addItem(event)"
+						class="item-Add"
+						id="item-Select"
+						title="addList"
+						type="button"
+					>
+						<i class="bx bxs-pencil"></i>Add Item
 					</button>
 				</div>
 			</form>
-			<div class="filter">
+			<div class="control-filter">
 				<input
+					class="form-input-filter"
 					type="text"
-					class="from-input-filter"
-					placeholder="Filter Item"
 					id="filter"
+					title="items"
+					placeholder="Filter Item"
 				/>
 			</div>
-			<ul id="item-list" class="item">
+			<ul id="list-Item" class="item">
 				<!-- <li>
-					Apple
-					<button class="remove-btn" type="submit" title="close-item">
+					Milk<button class="remove-btn" type="button">
 						<i class="bx bx-x"></i>
 					</button>
 				</li>
 				<li>
-					Orange
-					<button class="remove-btn" type="submit" title="close-item">
+					Biscuit<button class="remove-btn" type="button">
 						<i class="bx bx-x"></i>
 					</button>
 				</li>
 				<li>
-					Banana
-					<button class="remove-btn" type="submit" title="close-item">
+					Tea<button class="remove-btn" type="button">
 						<i class="bx bx-x"></i>
 					</button>
 				</li>
 				<li>
-					egg
-					<button class="remove-btn" title="close-item" type="submit">
+					Egg<button class="remove-btn" type="button">
 						<i class="bx bx-x"></i>
 					</button>
 				</li>
 				<li>
-					eggnog
-					<button class="remove-btn" title="close-item" type="submit">
+					Eggnog<button class="remove-btn" type="button">
 						<i class="bx bx-x"></i>
 					</button>
 				</li> -->
 			</ul>
-			<button id="clear-list" class="clear" type="button">Clear All</button>
+			<button id="clear-Item" type="button">Clear All</button>
 		</div>
-		<script src="Programs.js"></script>
+		<script src="Programs.JS"></script>
 	</body>
 </html>
